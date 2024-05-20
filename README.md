@@ -23,7 +23,7 @@ To run this project, you need to have Docker installed on your machine. Follow t
 2. Building the Docker Image
 
 ```sh
-docker build -t ai-model -f model.dockerfile.
+docker build -t ai-model -f model.dockerfile .
 ```
 3. Procfile
 Procfile is also provided to assign web commands.

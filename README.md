@@ -25,6 +25,9 @@ To run this project, you need to have Docker installed on your machine. Follow t
 ```sh
 docker build -t ai-model -f model.dockerfile.
 ```
+3. Procfile
+Procfile is also provided to assign web commands.
+
 ## Usage
 
 Once the Docker container is running, the API will be available at `http://localhost:8000`.

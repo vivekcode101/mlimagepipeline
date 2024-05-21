@@ -36,21 +36,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Visual Question Answering</h1>
+        <h2>Visual Question Answering</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <label>
               Question:
-              <input type="text" value={text} onChange={handleTextChange} required />
+              <input type="text" value={text} onChange={handleTextChange} required className="rounded-input"/>
             </label>
           </div>
           <div>
             <label>
               Upload Image:
-              <input type="file" onChange={handleImageChange} required />
+              <input type="file" onChange={handleImageChange} required  className="rounded-input"/>
             </label>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" className="rounded-input">Submit</button>
         </form>
         {result && (
           <div>

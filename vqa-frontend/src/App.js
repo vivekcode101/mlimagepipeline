@@ -25,7 +25,7 @@ function App() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:8000/ask', formData, {
+      const response = await axios.post('https://mlimage.test.demo.initz.run/ask', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

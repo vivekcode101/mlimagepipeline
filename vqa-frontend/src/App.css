@@ -1,0 +1,108 @@
+body {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App-header{
+  background-color: #2c2c2c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 0.5 black;
+  padding:  8px;
+  border-radius: 10px;
+  
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #2c2c2c; /* Slightly lighter dark background */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group textarea,
+.form-group input[type="file"] {
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #444; /* Dark border */
+  background-color: #3c3c3c; /* Darker background for input */
+  color: #ffffff; /* White text */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input[type="file"] {
+  padding: 5px;
+}
+
+.submit-btn {
+  border-radius: 12px;
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+/* Add this to your CSS file */
+.rounded-input {
+  border-radius: 8px; /* Adjust the value to make it as rounded as you like */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+   /* Optional: Adjust padding for better appearance */
+  border: 1px solid #ccc; /* Optional: Define border style */
+}
+
+.image-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+}
+.answer-card {
+  background-color: #2c2c2c; /* Card background color */
+  color: #ffffff; /* Card text color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow */
+  padding: 20px; /* Padding inside the card */
+  margin-top: 20px; /* Space between each card */
+}
+
+.ques{
+  margin-top: 12px;
+  margin-bottom: 10px;
+}

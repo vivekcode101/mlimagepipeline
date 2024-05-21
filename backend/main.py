@@ -1,19 +1,15 @@
 from model import model_pipeline
-from fastapi import FastAPI, UploadFile, Form
+from fastapi import FastAPI, UploadFile, Form, File
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 import io
 
 app = FastAPI()
 
-# Enable CORS for local development
-origins = [
-    "http://localhost:3000",
-]
-
+# Enable CORS for all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   const [text, setText] = useState('');
   const [image, setImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
   const [result, setResult] = useState(null);
 
   const handleTextChange = (event) => {
@@ -12,7 +13,9 @@ function App() {
   };
 
   const handleImageChange = (event) => {
-    setImage(event.target.files[0]);
+    const file = event.target.files[0];
+    setImage(file);
+    setImagePreview(URL.createObjectURL(file));
   };
 
   const handleSubmit = async (event) => {
@@ -41,15 +44,20 @@ function App() {
           <div>
             <label>
               Question:
-              <input type="text" value={text} onChange={handleTextChange} required className="rounded-input"/>
+              <input type="text" value={text} onChange={handleTextChange} required className="rounded-input" />
             </label>
           </div>
           <div>
             <label>
               Upload Image:
-              <input type="file" onChange={handleImageChange} required  className="rounded-input"/>
+              <input type="file" onChange={handleImageChange} required className="rounded-input" />
             </label>
           </div>
+          {imagePreview && (
+            <div className="image-preview">
+              <img src={imagePreview} alt="Selected" />
+            </div>
+          )}
           <button type="submit" className="rounded-input">Submit</button>
         </form>
         {result && (

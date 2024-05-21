@@ -39,15 +39,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Visual Question Answering</h2>
+        <h2 style={{textAlign:"center"}}>Visual Question Answering</h2>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className='ques'>
             <label>
               Question:
               <input type="text" value={text} onChange={handleTextChange} required className="rounded-input" />
             </label>
           </div>
-          <div>
+          <div className='ques'>
             <label>
               Upload Image:
               <input type="file" onChange={handleImageChange} required className="rounded-input" />
@@ -60,12 +60,13 @@ function App() {
           )}
           <button type="submit" className="rounded-input">Submit</button>
         </form>
+      </header>
         {result && (
-          <div>
-            <h2>Answer: {result}</h2>
+          <div className="answer-card">
+            <h3>Answer:</h3>
+            <p>{result}</p>
           </div>
         )}
-      </header>
     </div>
   );
 }

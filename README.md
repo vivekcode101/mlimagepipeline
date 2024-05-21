@@ -2,6 +2,10 @@
 
 This project contains an AI model implemented in Python. It provides a simple API with two endpoints: one for returning a "Hello World" message and another for processing an image and returning information about it.
 
+![Sample](asset/image.png)
+
+
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -15,10 +19,12 @@ This project contains an AI model implemented in Python. It provides a simple AP
 
 To run this project, you need to have Docker installed on your machine. Follow these steps to set up and run the project:
 
+For backend
+
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/ai-model-project.git
-    cd ai-model-project
+    git clone https://github.com/vivekcode101/mlimagepipeline
+    cd mlimagepipeline/backend
     ```
 2. Building the Docker Image
 
@@ -67,6 +73,23 @@ Once the Docker container is running, the API will be available at `http://local
 ```sh
 docker run -it -p 8000:8000 ai-model
 ```
+For frontend
+
+1.You should have npm installed in your local machine
+
+2.Run npm install in the vqa-frontend folder to install all the dependencies
+
+```sh
+npm i
+```
+3. Run the frontend
+
+```sh
+npm start
+```
+
+
+
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
